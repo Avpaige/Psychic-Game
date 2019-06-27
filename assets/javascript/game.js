@@ -37,44 +37,43 @@ var keyCodes = {
 var reset = function() {
     numGuess = 9;
     guesses = [];
+    compGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log("reset was run" +compGuess);
 
-}
+} 
 
     console.log ("comp guess is " + compGuess);
 
-
 document.onkeypress= function(event){    
+
 var playGuess = String.fromCharCode(event.keyCode); 
 
-guesses.push(playGuess);
+console.log(playGuess);
 
-document.getElementById("guessMade").textContent = ("You Guesses so far: " + guesses);
+//if guess in array  greater than 0 nothing happens or pushed that number in the array
 
 if (compGuess===playGuess){
     wins++;
+    console.log(wins);
+    document.getElementById("wins").textContent = ("Wins: " + wins);
     reset();
-} else if (compGuess!=playGuess){
-    numGuess--;
-    }if (numGuess===0){
+
+    //add function to rerandomize comp guess and reset array to 0
+}else if (numGuess===0){
     losses++;
     document.getElementById("losses").textContent = ("Losses: " + losses);
     reset();
     
+}else if (guesses.includes(playGuess)){
+alert ("You've already guessed this letter! Try Again!");
 
-
-    console.log (compGuess);
-
-
-    }
-
-document.onkeypress=function(event){
-    var playGuess = String.fromCharCode(event.keyCode); 
-
-
-document.getElementById("wins").textContent = ("Wins: "+ wins);
-document.getElementById("losses").textContent = ("Losses: "+ losses);
-document.getElementById("numGuess").textContent = ("Guesses Left: "+ numGuess);
-}
+} else {
+    numGuess--;
+    guesses.push(playGuess);
+    document.getElementById("numGuess").textContent = ("Guesses Left:  " + numGuess);
+    document.getElementById("guessMade").textContent = ("Your Guesses so far: " + guesses);
+    
 
 }
 
+};
