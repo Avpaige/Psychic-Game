@@ -57,13 +57,13 @@ if (compGuess===playGuess){
     wins++;
     console.log(wins);
     document.getElementById("wins").textContent = ("Wins: " + wins);
-    alert ("Congrats you beat Miss Cleo!");
+    alert ("Congrats! You beat Miss Cleo! You both guessed " +playGuess+ " !");
     reset();
 
     //add function to rerandomize comp guess and reset array to 0
 }else if (numGuess===0){
     losses++;
-    alert ("You couldn't beat Miss Cleo!");
+    alert ("You couldn't beat Miss Cleo! Press another letter to try again!");
     document.getElementById("losses").textContent = ("Losses: " + losses);
     reset();
     
