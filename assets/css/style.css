@@ -1,0 +1,23 @@
+img{
+
+    height:300px;
+   
+}
+
+body{
+
+    background-color: rgb(180, 48, 180);
+}
+
+h1{
+
+    color:purple;
+    font-size: 75px;
+}
+
+.container{
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+
+}

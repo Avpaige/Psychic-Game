@@ -2,6 +2,7 @@ var wins = 0;
 var losses = 0;
 var numGuess = 9;
 var guesses = [];
+var nonLet= ["1","2","3","4","5","6","7","8","9","0","-", "=", "`","/",".","[","]", ";", ","];
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var ranLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
 var compGuess= ranLetter;
@@ -56,17 +57,23 @@ if (compGuess===playGuess){
     wins++;
     console.log(wins);
     document.getElementById("wins").textContent = ("Wins: " + wins);
+    alert ("Congrats you beat Miss Cleo!");
     reset();
 
     //add function to rerandomize comp guess and reset array to 0
 }else if (numGuess===0){
     losses++;
+    alert ("You couldn't beat Miss Cleo!");
     document.getElementById("losses").textContent = ("Losses: " + losses);
     reset();
     
 }else if (guesses.includes(playGuess)){
 alert ("You've already guessed this letter! Try Again!");
 
+}else if (nonLet.includes(playGuess)){
+    alert ("That's not a letter! You can't fool Miss Cleo!");
+    
+    
 } else {
     numGuess--;
     guesses.push(playGuess);

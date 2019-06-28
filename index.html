@@ -3,26 +3,46 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Psychic Game</title>
+  <title>Beat Miss Cleo!</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script type="text/javascript" src="assets/javascript/game.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-<h1>The Psychic Game</h1>
+    <div class="container">
 
-<p>Guess what letter I'm thinking of</p>
+        <!-- Jumbotron with Title -->
+        <div class="jumbotron">
+          <h1 class="text-center">
+           Beat Miss Cleo!
+          </h1>
+       
+          </div>
+    
+        </div>
+      </div>
+        
 
-<p id="wins">Wins: 0</p>
+      <div class="container">
+          <div class="row">
+            <div class="col">
 
-<p id="losses">Losses: 0</p>
+                <p  class="text-center">Guess what letter Miss Cleo is thinking of!<br> Press any letter to start!
+                   Guess correctly and win!</p>
+                <p id="wins">Wins: 0</p>
+                <p id="losses">Losses: 0</p>
+                <p id="numGuess">Guesses Left: 9 </p>
+                <p id="guessMade">Your Guesses so far:</p>
+                            </div>
+            <div class="col">
+              <img src="assets/images/cleo.jpg">
+            </div>
+          </div>
 
-<p id="numGuess">Guesses Left: 9 </p>
-
-<p id="guessMade">Your Guesses so far:</p>
 
 
 
